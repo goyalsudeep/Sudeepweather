@@ -10,7 +10,12 @@ import {
   Area, AreaChart, Bar, BarChart, CartesianGrid, ComposedChart, Line,
   LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis
 } from "recharts";
-import type { AirPayload, Place, WeatherPayload } from "@/lib/types";
+import type { AirPayload,
+  Place,
+  WeatherPayload,
+  SeasonalPayload,
+  ClimatePayload,
+  HistoryPayload } from "@/lib/types";
 import {
   aqiLabel, buildAlerts, DEFAULT_PLACE, formatTemp, placeLabel, searchPlaces,
   shortTemp, weatherEmoji, weatherLabel
