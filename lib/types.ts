@@ -72,6 +72,7 @@ export type SeasonalPayload = {
     time: string[];
     temperature_2m?: number[];
     precipitation_probability?: number[];
+    precipitation?: number[];
   };
 };
 
