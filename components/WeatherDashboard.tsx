@@ -65,9 +65,9 @@ export default function WeatherDashboard() {
   const coords = `lat=${place.latitude}&lon=${place.longitude}`;
   const weather = useApi<WeatherPayload>(`/api/weather?${coords}`);
   const air = useApi<AirPayload>(`/api/air-quality?${coords}`);
-  const seasonal = useApi<any>(`/api/seasonal?${coords}`, tab === "month");
-  const climate = useApi<any>(`/api/climate?${coords}&year=${climateYear}`, tab === "year");
-  const history = useApi<any>(`/api/history?${coords}&year=${historyYear}`, tab === "year");
+  const seasonal = useApi<unknown>(`/api/seasonal?${coords}`, tab === "month");
+  const climate = useApi<unknown>(`/api/climate?${coords}&year=${climateYear}`, tab === "year");
+  const history = useApi<unknown>(`/api/history?${coords}&year=${historyYear}`, tab === "year");
 
   useEffect(() => {
     try {
