@@ -79,6 +79,7 @@ export type SeasonalPayload = {
 export type ClimatePayload = {
   daily?: {
     time: string[];
+    temperature_2m_mean?: number[];
     temperature_2m_max?: number[];
     temperature_2m_min?: number[];
     precipitation_sum?: number[];
@@ -98,6 +99,7 @@ export type ClimatePayload = {
 export type HistoryPayload = {
   daily?: {
     time: string[];
+    temperature_2m_mean?: number[];
     temperature_2m_max?: number[];
     temperature_2m_min?: number[];
     precipitation_sum?: number[];
