@@ -128,7 +128,11 @@ const history = useApi<HistoryPayload>(
     hourly.time.forEach((time: string, i: number) => {
       const key = time.slice(0, 7);
       const bucket = buckets.get(key) ?? { sum: 0, count: 0, rain: 0, rainCount: 0 };
-      if (Number.isFinite(hourly.temperature_2m?.[i])) { bucket.sum += hourly.temperature_2m[i]; bucket.count++; }
+     const temperature = hourly.temperature_2m?.[i];
+if (temperature !== undefined && Number.isFinite(temperature)) {
+  bucket.sum += temperature;
+  bucket.count++;
+}
       if (Number.isFinite(hourly.precipitation?.[i])) { bucket.rain += hourly.precipitation[i]; bucket.rainCount++; }
       buckets.set(key, bucket);
     });
