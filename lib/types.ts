@@ -58,3 +58,52 @@ export type AirPayload = {
     pm2_5?: number[];
   };
 };
+
+export type SeasonalPayload = {
+  daily?: {
+    time: string[];
+    temperature_2m_max?: number[];
+    temperature_2m_min?: number[];
+    precipitation_sum?: number[];
+    precipitation_probability_max?: number[];
+    weather_code?: number[];
+  };
+  hourly?: {
+    time: string[];
+    temperature_2m?: number[];
+    precipitation_probability?: number[];
+  };
+};
+
+export type ClimatePayload = {
+  daily?: {
+    time: string[];
+    temperature_2m_max?: number[];
+    temperature_2m_min?: number[];
+    precipitation_sum?: number[];
+  };
+  monthly?: {
+    time: string[];
+    temperature_2m_mean?: number[];
+    precipitation_sum?: number[];
+  };
+  yearly?: {
+    time: string[];
+    temperature_2m_mean?: number[];
+    precipitation_sum?: number[];
+  };
+};
+
+export type HistoryPayload = {
+  daily?: {
+    time: string[];
+    temperature_2m_max?: number[];
+    temperature_2m_min?: number[];
+    precipitation_sum?: number[];
+    weather_code?: number[];
+  };
+  hourly?: {
+    time: string[];
+    temperature_2m?: number[];
+  };
+};
